@@ -1,0 +1,20 @@
+SELECT * FROM DBT_TUTORIAL.DBT_RAW.V_INCR_CUSTOMER;
+
+ALTER TABLE DBT_TUTORIAL.DBT_SRC_FILES_DATA.DIM_CUSTOMER ADD
+    CUSTOMER_CODE STRING,
+    GENDER STRING,
+    LOYALTY_TIER STRING,
+    SIGNUP_DATE DATE;
+
+INSERT INTO DBT_TUTORIAL.DBT_SRC_FILES_DATA.DIM_CUSTOMER (CUSTOMER_SK, CUSTOMER_CODE, FIRST_NAME, LAST_NAME, GENDER, EMAIL, PHONE, LOYALTY_TIER, SIGNUP_DATE)
+VALUES
+(41, 'CUST-00041', 'Elias', 'Vance', 'M', 'elias.vance41@example.com', '+1-555-301-4422', 'Gold', '2022-04-05'),
+(42, 'CUST-00042', 'Sloane', 'Stephens', 'F', 'sloane.s42@example.com', '+1-555-882-1920', 'Bronze', '2022-04-08'),
+(43, 'CUST-00043', 'Julian', 'Porter', 'M', 'j.porter43@example.com', '+1-555-123-9981', 'Silver', '2022-04-12'),
+(44, 'CUST-00044', 'Nora', 'Quinn', 'F', 'nora.q44@example.com', '+1-555-456-7722', 'Platinum', '2022-04-15'),
+(45, 'CUST-00045', 'Felix', 'Grant', 'M', 'f.grant45@example.com', '+1-555-789-3344', 'Gold', '2022-04-19'),
+(46, 'CUST-00046', 'Ivy', 'Rhodes', 'F', 'ivy.rhodes46@example.com', '+1-555-012-5566', 'Silver', '2022-04-22'),
+(47, 'CUST-00047', 'Miles', 'Foster', 'M', 'miles.f47@example.com', '+1-555-345-8899', 'Bronze', '2022-04-26'),
+(48, 'CUST-00048', 'Clara', 'Bishop', 'F', 'clara.b48@example.com', '+1-555-678-1122', 'Gold', '2022-04-29'),
+(49, 'CUST-00049', 'Silas', 'Kane', 'M', 's.kane49@example.com', '+1-555-901-4433', 'Silver', '2022-05-01'),
+(50, 'CUST-00050', 'Hazel', 'Nash', 'F', 'hazel.nash50@example.com', '+1-555-234-7788', 'Platinum', '2022-05-03');
